@@ -1,4 +1,3 @@
-
 // Product data
 const products = [
   {
@@ -14,14 +13,14 @@ const products = [
     features: [
       {
         title: "Advanced Low-Deflection Technology",
-        description: "Proprietary shaft construction significantly reduces cue ball deflection for superior accuracy on draw and english shots."
+        description: "Proprietary shaft construction significantly reduces cue ball deflection for superior accuracy on draw and English shots."
       },
       {
         title: "Carbon Fiber Ferrule",
         description: "Lightweight carbon fiber ferrule enhances durability while maintaining perfect feel and vibration dampening."
       },
       {
-        title: "Premium Carbon Fiber" ,
+        title: "Premium Carbon Fiber",
         description: "Handcrafted with premium Carbon Fiber Shaft and Handle for unmatched aesthetics."
       },
       {
@@ -43,7 +42,7 @@ const products = [
     id: "overcomer-ii",
     name: "Overcomer II",
     shortDescription: "The advanced performance cue with low-deflection technology and premium materials.",
-    fullDescription: "The Overcomer II represents the pinnacle of modern pool cue technology. Building on the foundation of the original Overcomer, this advanced model integrates our proprietary low-deflection technology to provide exceptional accuracy on every shot. The premium construction and precision engineering for players who demand the very best in both performance and aesthetics.",
+    fullDescription: "The Overcomer II represents the pinnacle of modern pool cue technology. Building on the foundation of the original Overcomer, this advanced model integrates our proprietary low-deflection technology to provide exceptional accuracy on every shot. The premium construction and precision engineering ensure players experience the very best in both performance and aesthetics.",
     price: 199.99,
     images: [
       "https://overcomerpoolcue.com/photo4.png",
@@ -52,7 +51,7 @@ const products = [
     features: [
       {
         title: "Advanced Low-Deflection Technology",
-        description: "Proprietary shaft construction significantly reduces cue ball deflection for superior accuracy on draw and english shots."
+        description: "Proprietary shaft construction significantly reduces cue ball deflection for superior accuracy on draw and English shots."
       },
       {
         title: "Carbon Fiber Ferrule",
@@ -81,6 +80,25 @@ const products = [
 
 // Helper function to get product by ID
 function getProductById(id) {
-  return products.find(product => product.id === id);
+  return products.find(product => product.id === id) || null;
 }
 
+// Function to render product details safely
+function renderProductDetails(productId) {
+  const product = getProductById(productId);
+  if (!product) {
+    console.error("Product not found.");
+    return;
+  }
+
+  // Prevent duplication by ensuring specifications are only rendered once
+  const specContainer = document.getElementById("specifications");
+  if (specContainer) {
+    specContainer.innerHTML = ""; // Clear previous entries
+    product.specifications.forEach(spec => {
+      const specItem = document.createElement("p");
+      specItem.textContent = `${spec.name}: ${spec.value}`;
+      specContainer.appendChild(specItem);
+    });
+  }
+}
