@@ -6,7 +6,7 @@ const products = [
     name: "Overcomer I",
     shortDescription: "The classic, professional-grade pool cue with perfect balance and precision.",
     fullDescription: "The Overcomer I embodies the perfect fusion of traditional craftsmanship and modern engineering. Meticulously crafted for professional players and serious enthusiasts alike, this cue delivers unmatched consistency and feel with every shot. The balanced weight distribution and premium shaft provide superior control, while the elegant design makes a statement without compromising performance.",
-    price: 299.99,
+    price: 199.99,
     images: [
       "https://overcomerpoolcue.com/photo1.png",
       "https://overcomerpoolcue.com/photo2.png"
@@ -44,7 +44,7 @@ const products = [
     name: "Overcomer II",
     shortDescription: "The advanced performance cue with low-deflection technology and premium materials.",
     fullDescription: "The Overcomer II represents the pinnacle of modern pool cue technology. Building on the foundation of the original Overcomer, this advanced model integrates our proprietary low-deflection technology to provide exceptional accuracy on every shot. The premium construction and precision engineering for players who demand the very best in both performance and aesthetics.",
-    price: 399.99,
+    price: 199.99,
     images: [
       "https://overcomerpoolcue.com/photo4.png",
       "https://overcomerpoolcue.com/photo3.png"
