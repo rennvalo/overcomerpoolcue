@@ -13,37 +13,37 @@ const products = [
     ],
     features: [
       {
-        title: "Precision-Engineered Shaft",
-        description: "Crafted from premium Carbon Fiber, kiln-dried and professionally shaped for perfect straightness and consistency."
+        title: "Advanced Low-Deflection Technology",
+        description: "Proprietary shaft construction significantly reduces cue ball deflection for superior accuracy on draw and english shots."
       },
       {
-        title: "Professional Taper",
-        description: "Pro taper provides the perfect balance of control and power, allowing for precise english application and reduced deflection."
+        title: "Carbon Fiber Ferrule",
+        description: "Lightweight carbon fiber ferrule enhances durability while maintaining perfect feel and vibration dampening."
       },
       {
-        title: "Premium Irish Linen Wrap",
-        description: "Hand-wrapped with genuine Irish linen for superior grip, comfort, and classic feel during extended play."
+        title: "Premium Carbon Fiber" ,
+        description: "Handcrafted with premium Carbon Fiber Shaft and Handle for unmatched aesthetics."
       },
       {
-        title: "Stainless Steel Joint",
-        description: "Durable stainless steel joint ensures perfect alignment and seamless power transfer throughout the cue."
+        title: "Multi-Layer Leather Tip",
+        description: "Premium multi-layered leather tip provides exceptional chalk retention and consistent ball control."
       }
     ],
     specifications: [
-      { name: "Weight", value: "19-21 oz (customizable)" },
+      { name: "Weight", value: "19 oz (customizable)" },
       { name: "Length", value: "58 inches" },
-      { name: "Shaft", value: "Carbon Fiber" },
-      { name: "Tip", value: "13mm premium leather" },
-      { name: "Wrap", value: "Genuine Irish linen" },
-      { name: "Joint", value: "Stainless steel 5/16 x 18" },
-      { name: "Butt", value: "Premium hardwood with intricate inlays" }
+      { name: "Shaft", value: "Premium Carbon Fiber with proprietary core technology" },
+      { name: "Tip", value: "12.5mm multi-layered leather" },
+      { name: "Wrap", value: "Premium handle wrap" },
+      { name: "Joint", value: "Interchangeable quick-release tip technology" },
+      { name: "Handle", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
     ]
   },
   {
     id: "overcomer-ii",
     name: "Overcomer II",
     shortDescription: "The advanced performance cue with low-deflection technology and premium materials.",
-    fullDescription: "The Overcomer II represents the pinnacle of modern pool cue technology. Building on the foundation of the original Overcomer, this advanced model integrates our proprietary low-deflection technology to provide exceptional accuracy on every shot. The premium construction features exotic wood accents and precision engineering for players who demand the very best in both performance and aesthetics.",
+    fullDescription: "The Overcomer II represents the pinnacle of modern pool cue technology. Building on the foundation of the original Overcomer, this advanced model integrates our proprietary low-deflection technology to provide exceptional accuracy on every shot. The premium construction and precision engineering for players who demand the very best in both performance and aesthetics.",
     price: 399.99,
     images: [
       "https://overcomerpoolcue.com/photo4.png",
@@ -59,8 +59,8 @@ const products = [
         description: "Lightweight carbon fiber ferrule enhances durability while maintaining perfect feel and vibration dampening."
       },
       {
-        title: "Exotic Wood Inlays",
-        description: "Handcrafted with premium exotic wood inlays and intricate design elements for unmatched aesthetics."
+        title: "Premium Carbon Fiber",
+        description: "Handcrafted with premium Carbon Fiber Shaft and Handle for unmatched aesthetics."
       },
       {
         title: "Multi-Layer Leather Tip",
@@ -68,13 +68,13 @@ const products = [
       }
     ],
     specifications: [
-      { name: "Weight", value: "18.5-21 oz (customizable)" },
+      { name: "Weight", value: "19 oz (customizable)" },
       { name: "Length", value: "58 inches" },
-      { name: "Shaft", value: "Premium Carbob Fiber with proprietary core technology" },
+      { name: "Shaft", value: "Premium Carbon Fiber with proprietary core technology" },
       { name: "Tip", value: "12.5mm multi-layered leather" },
-      { name: "Wrap", value: "Premium leather with double-pressed points" },
-      { name: "Joint", value: "Radial pin with quick-release technology" },
-      { name: "Butt", value: "Exotic hardwoods with custom inlays" }
+      { name: "Wrap", value: "Premium handle wrap" },
+      { name: "Joint", value: "Interchangeable quick-release tip technology" },
+      { name: "Handle", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
     ]
   }
 ];

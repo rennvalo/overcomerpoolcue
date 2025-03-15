@@ -15,7 +15,7 @@ const Features = () => {
   const features = [
     {
       title: "Premium Materials",
-      description: "Every Overcomer cue is crafted from top-tier maple and premium hardwoods, ensuring both beauty and performance."
+      description: "Every Overcomer cue is crafted from top-tier carbon fiber, ensuring both beauty and performance."
     },
     {
       title: "Professional Balance",
