@@ -17,11 +17,11 @@ const products = [
       },
       {
         title: "Carbon Fiber Ferrule",
-        description: "Lightweight carbon fiber ferrule enhances durability while maintaining perfect feel and vibration dampening."
+        description: "Lightweight Delrin ferrule enhances durability while maintaining perfect feel and vibration dampening."
       },
       {
         title: "Premium Carbon Fiber",
-        description: "Handcrafted with premium Carbon Fiber Shaft and Handle for unmatched aesthetics."
+        description: "Handcrafted with premium Carbon Fiber Shaft and Butt for unmatched aesthetics."
       },
       {
         title: "Multi-Layer Leather Tip",
@@ -30,12 +30,12 @@ const products = [
     ],
     specifications: [
       { name: "Weight", value: "19 oz (customizable)" },
-      { name: "Length", value: "58 inches" },
+      { name: "Length", value: "59 inches" },
       { name: "Shaft", value: "Premium Carbon Fiber with proprietary core technology" },
-      { name: "Tip", value: "12.5mm multi-layered leather" },
-      { name: "Wrap", value: "Premium handle wrap" },
+      { name: "Tip", value: "13mm multi-layered leather" },
+      { name: "Wrap", value: "Premium Butt wrap" },
       { name: "Joint", value: "Interchangeable quick-release tip technology" },
-      { name: "Handle", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
+      { name: "Butt", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
     ]
   },
   {
@@ -55,11 +55,11 @@ const products = [
       },
       {
         title: "Carbon Fiber Ferrule",
-        description: "Lightweight carbon fiber ferrule enhances durability while maintaining perfect feel and vibration dampening."
+        description: "Lightweight Delrin ferrule enhances durability while maintaining perfect feel and vibration dampening."
       },
       {
         title: "Premium Carbon Fiber",
-        description: "Handcrafted with premium Carbon Fiber Shaft and Handle for unmatched aesthetics."
+        description: "Handcrafted with premium Carbon Fiber Shaft and Butt for unmatched aesthetics."
       },
       {
         title: "Multi-Layer Leather Tip",
@@ -68,12 +68,12 @@ const products = [
     ],
     specifications: [
       { name: "Weight", value: "19 oz (customizable)" },
-      { name: "Length", value: "58 inches" },
+      { name: "Length", value: "59 inches" },
       { name: "Shaft", value: "Premium Carbon Fiber with proprietary core technology" },
-      { name: "Tip", value: "12.5mm multi-layered leather" },
-      { name: "Wrap", value: "Premium handle wrap" },
+      { name: "Tip", value: "13mm multi-layered leather" },
+      { name: "Wrap", value: "Premium Butt wrap" },
       { name: "Joint", value: "Interchangeable quick-release tip technology" },
-      { name: "Handle", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
+      { name: "Butt", value: "Premium Carbon Fiber with custom Heat Shrink wrap for extra control" }
     ]
   }
 ];
