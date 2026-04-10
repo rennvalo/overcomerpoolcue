@@ -1,6 +1,9 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: overcomer-poolcue
     container_name: overcomer-poolcue
     ports:
       - "8432:8432"
