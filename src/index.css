@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%;
+    --foreground: 40 20% 90%;
+    --card: 0 0% 8%;
+    --card-foreground: 40 20% 90%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 40 20% 90%;
+    --primary: 38 42% 39%;
+    --primary-foreground: 40 20% 95%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 40 20% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 40 10% 55%;
+    --accent: 38 42% 39%;
+    --accent-foreground: 40 20% 95%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 38 42% 39%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+    background-color: #0a0a0a;
+    color: #e8dcc8;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-overcomer text-white font-montserrat font-semibold tracking-wider uppercase text-sm px-8 py-3 transition-all duration-300 hover:bg-overcomer-light hover:text-black;
+  }
+
+  .section-title {
+    @apply font-playfair text-3xl md:text-4xl text-overcomer-light mb-4 text-center;
+  }
+
+  .section-subtitle {
+    @apply font-montserrat text-sm md:text-base text-muted-foreground text-center max-w-2xl mx-auto mb-12;
+  }
+}

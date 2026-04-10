@@ -1,0 +1,7 @@
+services:
+  web:
+    build: .
+    container_name: overcomer-poolcue
+    ports:
+      - "8432:8432"
+    restart: unless-stopped
