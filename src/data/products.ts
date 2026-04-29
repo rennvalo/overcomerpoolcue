@@ -25,7 +25,7 @@ export const products: Product[] = [
   {
     id: 'overcomer-i',
     name: 'Overcomer I',
-    price: '$2,999.99',
+    price: '$195.00',
     tag: 'Premium Pool Cue',
     description:
       'The classic, professional-grade pool cue with perfect balance and precision. Every Overcomer cue is crafted from top-tier Carbon Fiber, ensuring both beauty and performance.',
@@ -55,7 +55,7 @@ export const products: Product[] = [
   {
     id: 'overcomer-ii',
     name: 'Overcomer II',
-    price: '$3,999.99',
+    price: '$195.00',
     tag: 'Premium Pool Cue',
     description:
       'The advanced performance cue with low-deflection technology and premium materials. Incorporating advanced ferrules, premium tips, and precision-cut joints for exceptional performance.',
