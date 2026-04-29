@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Features', href: '/#features' },
   { label: 'Products', href: '/#products' },
   { label: 'Testimonials', href: '/#testimonials' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -18,15 +20,23 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleNavClick = (href: string) => {
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
     setMobileOpen(false);
     if (href.startsWith('/#')) {
+      e.preventDefault();
       const id = href.slice(2);
       const el = document.getElementById(id);
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // Navigate home first, then scroll
+        navigate('/');
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
       }
     }
+    // For real routes like /blog, let the Link handle it normally
   };
 
   return (
@@ -47,17 +57,14 @@ export default function Navbar() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-              }}
+              to={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="font-montserrat text-xs font-medium tracking-widest uppercase text-foreground/70 hover:text-overcomer-light transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -89,17 +96,14 @@ export default function Navbar() {
       {mobileOpen && (
         <nav className="md:hidden bg-black/95 border-t border-overcomer-dark/40 px-6 py-4 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-              }}
+              to={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="font-montserrat text-xs font-medium tracking-widest uppercase text-foreground/70 hover:text-overcomer-light transition-colors"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
       )}

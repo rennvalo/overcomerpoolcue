@@ -1,4 +1,55 @@
 services:
+  db:
+    image: postgres:15-alpine
+    container_name: overcomer-db
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: overcomer-backend
+    container_name: overcomer-backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    expose:
+      - "8000"
+
+  article_generator:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: overcomer-backend
+    container_name: overcomer-article-gen
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PYTHONUNBUFFERED: "1"
+    command: ["python", "-u", "scripts/fullarticlegen.py", "--interval", "24"]
+    depends_on:
+      db:
+        condition: service_healthy
+      backend:
+        condition: service_started
+
   web:
     build:
       context: .
@@ -8,6 +59,8 @@ services:
     ports:
       - "8432:8432"
     restart: unless-stopped
+    depends_on:
+      - backend
 
   tunnel:
     image: cloudflare/cloudflared:latest
@@ -18,3 +71,6 @@ services:
       - web
     env_file:
       - .env
+
+volumes:
+  pgdata:
